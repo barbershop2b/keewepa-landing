@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كيوبا - تطبيق حجز الحلاقين</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo"><i class="fas fa-scissors"></i>كيوبا</a>
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="#" data-key="home">الرئيسية</a></li>
+                    <li><a href="#" data-key="features">الميزات</a></li>
+                    <li><a href="#" data-key="about">عن التطبيق</a></li>
+                    <li><a href="#" data-key="contact">تواصل معنا</a></li>
+                </ul>
+                <div class="language-selector">
+                    <button class="lang-toggle">
+                        <span class="current-lang">العربية</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown">
+                        <a href="#" class="lang-option active" data-lang="ar">العربية</a>
+                        <a href="#" class="lang-option" data-lang="fr">Français</a>
+                        <a href="#" class="lang-option" data-lang="en">English</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 data-key="hero_title">احجز أفضل <span>حلاقين</span> في المغرب</h1>
+                <p data-key="hero_description">اكتشف تطبيق كيوبا لحجز أفضل الحلاقين والصالونات في منطقتك. تقييمات حقيقية وتجربة حجز سلسة.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" id="notify-btn" data-key="hero_cta">أشعّرني عند الإطلاق</button>
+                    <button class="btn btn-secondary" id="demo-btn" data-key="hero_demo">مشاهدة العرض التوضيحي</button>
+                </div>
+                <div class="app-badges">
+                    <img src="https://www.svgrepo.com/show/303128/download-on-the-app-store-apple-logo.svg" alt="App Store" class="app-badge">
+                    <img src="https://www.svgrepo.com/show/303161/google-play-badge-logo.svg" alt="Google Play" class="app-badge">
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="phone-mockup">
+                    <div class="screen">
+                        <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="تطبيق كيوبا">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="countdown-section">
+            <div class="container">
+                <h3 data-key="launch_countdown">التطبيق سيُطلق خلال:</h3>
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="days">15</div>
+                        <div class="countdown-label" data-key="days_label">أيام</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="hours">08</div>
+                        <div class="countdown-label" data-key="hours_label">ساعات</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="minutes">42</div>
+                        <div class="countdown-label" data-key="minutes_label">دقائق</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="seconds">19</div>
+                        <div class="countdown-label" data-key="seconds_label">ثواني</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-intro">
+                    <h2 data-key="features_title">ميزات التطبيق</h2>
+                    <p data-key="features_description">كل ما تحتاجه لتجربة حلاقة مثالية</p>
+                </div>
+                <div class="section-controls">
+                    <button class="control-btn active" data-filter="all">
+                        <i class="fas fa-th-large"></i>
+                        <span data-key="all_features">جميع الميزات</span>
+                    </button>
+                    <button class="control-btn" data-filter="booking">
+                        <i class="fas fa-calendar-check"></i>
+                        <span data-key="booking_features">الحجز</span>
+                    </button>
+                    <button class="control-btn" data-filter="discovery">
+                        <i class="fas fa-search"></i>
+                        <span data-key="discovery_features">الاكتشاف</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="features-grid">
+                <!-- Booking Features -->
+                <div class="feature-card" data-category="booking">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-check"></i>
+                        <div class="icon-badge">1</div>
+                    </div>
+                    <div class="feature-content">
+                        <h3 data-key="feature1_title">حجز سهل</h3>
+                        <p data-key="feature1_desc">احجز موعدك مع أفضل الحلاقين في ثوانٍ</p>
+                        <ul class="feature-benefits">
+                            <li data-key="benefit1_1">تحديد التاريخ والوقت بسهولة</li>
+                            <li data-key="benefit1_2">اختيار الخدمة المطلوبة</li>
+                        </ul>
+                    </div>
+                    <div class="feature-cta">
+                        <button class="btn btn-outline" data-key="learn_more">معرفة المزيد</button>
+                    </div>
+                </div>
+                
+                <div class="feature-card" data-category="booking">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                        <div class="icon-badge">2</div>
+                    </div>
+                    <div class="feature-content">
+                        <h3 data-key="feature2_title">تذكيرات ذكية</h3>
+                        <p data-key="feature2_desc">نظام تذكير تلقائي بموعد حجزك</p>
+                        <ul class="feature-benefits">
+                            <li data-key="benefit2_1">إشعارات قبل الموعد</li>
+                            <li data-key="benefit2_2">تذكير بإعادة الحجز</li>
+                        </ul>
+                    </div>
+                    <div class="feature-cta">
+                        <button class="btn btn-outline" data-key="learn_more">معرفة المزيد</button>
+                    </div>
+                </div>
+                
+                <!-- Discovery Features -->
+                <div class="feature-card" data-category="discovery">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                        <div class="icon-badge">3</div>
+                    </div>
+                    <div class="feature-content">
+                        <h3 data-key="feature3_title">تقييمات حقيقية</h3>
+                        <p data-key="feature3_desc">اقرأ تقييمات العملاء الحقيقيين قبل الحجز</p>
+                        <ul class="feature-benefits">
+                            <li data-key="benefit3_1">تقييمات موثقة</li>
+                            <li data-key="benefit3_2">صور حقيقية للخدمات</li>
+                        </ul>
+                    </div>
+                    <div class="feature-cta">
+                        <button class="btn btn-outline" data-key="learn_more">معرفة المزيد</button>
+                    </div>
+                </div>
+                
+                <div class="feature-card" data-category="discovery">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="icon-badge">4</div>
+                    </div>
+                    <div class="feature-content">
+                        <h3 data-key="feature4_title">تحديد الموقع</h3>
+                        <p data-key="feature4_desc">ابحث عن أفضل الحلاقين بالقرب منك</p>
+                        <ul class="feature-benefits">
+                            <li data-key="benefit4_1">خريطة تفاعلية</li>
+                            <li data-key="benefit4_2">حساب المسافات</li>
+                        </ul>
+                    </div>
+                    <div class="feature-cta">
+                        <button class="btn btn-outline" data-key="learn_more">معرفة المزيد</button>
+                    </div>
+                </div>
+                
+                <div class="feature-card" data-category="booking">
+                    <div class="feature-icon">
+                        <i class="fas fa-percent"></i>
+                        <div class="icon-badge">5</div>
+                    </div>
+                    <div class="feature-content">
+                        <h3 data-key="feature5_title">عروض حصرية</h3>
+                        <p data-key="feature5_desc">احصل على خصومات حصرية عند الحجز عبر التطبيق</p>
+                        <ul class="feature-benefits">
+                            <li data-key="benefit5_1">خصومات ترحيبية</li>
+                            <li data-key="benefit5_2">عروض موسمية</li>
+                        </ul>
+                    </div>
+                    <div class="feature-cta">
+                        <button class="btn btn-outline" data-key="learn_more">معرفة المزيد</button>
+                    </div>
+                </div>
+                
+                <div class="feature-card" data-category="discovery">
+                    <div class="feature-icon">
+                        <i class="fas fa-history"></i>
+                        <div class="icon-badge">6</div>
+                    </div>
+                    <div class="feature-content">
+                        <h3 data-key="feature6_title">سجل الحجوزات</h3>
+                        <p data-key="feature6_desc">تتبع جميع حجوزاتك السابقة بسهولة</p>
+                        <ul class="feature-benefits">
+                            <li data-key="benefit6_1">سجل مفصل للخدمات</li>
+                            <li data-key="benefit6_2">إمكانية إعادة الحجز</li>
+                        </ul>
+                    </div>
+                    <div class="feature-cta">
+                        <button class="btn btn-outline" data-key="learn_more">معرفة المزيد</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="features-cta">
+                <button class="btn btn-primary" data-key="view_all_features">
+                    <i class="fas fa-arrow-down"></i>
+                    <span>عرض جميع الميزات</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+<!-- Image Gallery -->
+
+<section class="gallery">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-intro">
+                <h2 data-key="gallery_title">تجارب عملائنا</h2>
+                <p data-key="gallery_description">شاهد أفضل اللحظات مع حلاقينا المحترفين</p>
+            </div>
+            <div class="section-controls">
+                <button class="control-btn active" data-filter="all">
+                    <i class="fas fa-th-large"></i>
+                    <span data-key="all_gallery">الكل</span>
+                </button>
+                <button class="control-btn" data-filter="men">
+                    <i class="fas fa-male"></i>
+                    <span data-key="men_gallery">رجال</span>
+                </button>
+                <button class="control-btn" data-filter="women">
+                    <i class="fas fa-female"></i>
+                    <span data-key="women_gallery">نساء</span>
+                </button>
+                <button class="control-btn" data-filter="salons">
+                    <i class="fas fa-store"></i>
+                    <span data-key="salons_gallery">صالونات</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item" data-category="women">
+                <!-- Removed extra spaces from src -->
+                <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="حلاقة نسائية">
+                <div class="gallery-overlay">
+                    <div class="gallery-icons">
+                        <button class="icon-btn">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="icon-btn">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="gallery-content">
+                    <h3 data-key="gallery_caption1">خدمات نسائية</h3>
+                    <p data-key="gallery_desc1">مساحات خاصة للنساء</p>
+                    <div class="gallery-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> الدار البيضاء</span>
+                        <span><i class="fas fa-star"></i> 4.9</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="men">
+                <!-- Removed extra spaces from src -->
+                <img src="https://images.unsplash.com/photo-1536520002442-39764a41e987?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="حلاقة رجل">
+                <div class="gallery-overlay">
+                    <div class="gallery-icons">
+                        <button class="icon-btn">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="icon-btn">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="gallery-content">
+                    <h3 data-key="gallery_caption2">خبرة محترفة</h3>
+                    <p data-key="gallery_desc2">حلاقون ذوو خبرة عالية</p>
+                    <div class="gallery-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> فاس</span>
+                        <span><i class="fas fa-star"></i> 4.7</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="salons">
+                <!-- Removed extra spaces from src -->
+                <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="صالون حلاقة">
+                <div class="gallery-overlay">
+                    <div class="gallery-icons">
+                        <button class="icon-btn">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="icon-btn">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="gallery-content">
+                    <h3 data-key="gallery_caption3">صالونات نسائية</h3>
+                    <p data-key="gallery_desc3">مساحات خاصة للنساء</p>
+                    <div class="gallery-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> طنجة</span>
+                        <span><i class="fas fa-star"></i> 4.8</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="women">
+                <!-- Removed extra spaces from src -->
+                <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="علاجات تجميلية">
+                <div class="gallery-overlay">
+                    <div class="gallery-icons">
+                        <button class="icon-btn">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="icon-btn">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="gallery-content">
+                    <h3 data-key="gallery_caption4">علاجات تجميلية شاملة</h3>
+                    <p data-key="gallery_desc4">خدمات تجميلية متنوعة</p>
+                    <div class="gallery-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> الدار البيضاء</span>
+                        <span><i class="fas fa-star"></i> 4.9</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-cta">
+            <button class="btn btn-primary" data-key="view_all_gallery">
+                <i class="fas fa-images"></i>
+                <span>عرض جميع الصور</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+    <!-- Testimonials -->
+<section class="testimonials">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-intro">
+                <h2 data-key="testimonials_title">آراء العملاء</h2>
+                <p data-key="testimonials_description">ما يقوله عملاؤنا عن تجربتهم مع كيوبا</p>
+            </div>
+            <div class="testimonial-controls">
+                <button class="control-btn prev-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <button class="control-btn next-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="testimonial-slider">
+            <div class="testimonial-track">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="author-avatar">أحمد</div>
+                            <div class="author-info">
+                                <h4 data-key="testimonial1_name">أحمد محمد</h4>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="verified-badge">
+                                <i class="fas fa-check-circle"></i>
+                                <span data-key="verified">مُحقق</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-text" data-key="testimonial1_text">
+                            أفضل تطبيق استخدمته لحجز مواعيد الحلاقة. سهولة الاستخدام والتقييمات الحقيقية جعلت تجربتي ممتعة.
+                        </div>
+                        <div class="testimonial-meta">
+                            <span class="date">منذ 3 أسابيع</span>
+                            <span class="service">حلاقة كلاسيكية</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more testimonials here -->
+            </div>
+        </div>
+
+        <div class="testimonial-stats">
+            <div class="stat-item">
+                <div class="stat-number">4.8</div>
+                <div class="stat-label">تقييم العملاء</div>
+                <div class="stat-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">1.2K+</div>
+                <div class="stat-label">عملاء سعداء</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">يوصون بنا</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container cta-content">
+            <h2 data-key="cta_title">كن أول من يجرب كيوبا</h2>
+            <p data-key="cta_description">اشترك في نشرتنا الإخبارية لتكون أول من يعرف عند إطلاق التطبيق. احصل على عروض حصرية ووصول مبكر!</p>
+            <form class="email-form">
+                <input type="email" placeholder="أدخل بريدك الإلكتروني" data-key="cta_placeholder">
+                <button type="submit" data-key="cta_button">أشعّرني</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 data-key="footer_title">كيوبا</h3>
+                    <p data-key="footer_description">تطبيقك الأول لحجز أفضل الحلاقين في المغرب. اكتشف، احجز، واستمتع بتجربة حلاقة مثالية.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3 data-key="quick_links">روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-key="home_footer"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
+                        <li><a href="#" data-key="about_footer"><i class="fas fa-chevron-left"></i> عن التطبيق</a></li>
+                        <li><a href="#" data-key="features_footer"><i class="fas fa-chevron-left"></i> الميزات</a></li>
+                        <li><a href="#" data-key="privacy"><i class="fas fa-chevron-left"></i> سياسة الخصوصية</a></li>
+                        <li><a href="#" data-key="terms"><i class="fas fa-chevron-left"></i> شروط الاستخدام</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 data-key="services">الخدمات</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-left"></i> <span data-key="service1">حلاقين رجال</span></a></li>
+                        <li><a href="#"><i class="fas fa-chevron-left"></i> <span data-key="service2">صالونات نسائية</span></a></li>
+                        <li><a href="#"><i class="fas fa-chevron-left"></i> <span data-key="service3">حلاقة الأطفال</span></a></li>
+                        <li><a href="#"><i class="fas fa-chevron-left"></i> <span data-key="service4">خدمات إضافية</span></a></li>
+                        <li><a href="#"><i class="fas fa-chevron-left"></i> <span data-key="service5">تدريب الحلاقين</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 data-key="contact_us">تواصل معنا</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> <span data-key="address">الدار البيضاء، المغرب</span></a></li>
+                        <li><a href="#"><i class="fas fa-phone"></i> <span data-key="phone">+212 123 456 789</span></a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i> <span data-key="email">info@keewepa.ma</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p data-key="copyright">&copy; 2023 كيوبا. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
